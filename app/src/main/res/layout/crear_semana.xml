@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calendarioCrearSemana"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvLunes"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Lunes"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMartes"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
+        android:text="Martes"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLunes" />
+
+    <TextView
+        android:id="@+id/tvMiercoles"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
+        android:text="Miércoles"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMartes" />
+
+    <TextView
+        android:id="@+id/tvJueves"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
+        android:text="Jueves"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMiercoles" />
+
+    <TextView
+        android:id="@+id/tvViernes"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
+        android:text="Viernes"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvJueves" />
+
+    <TextView
+        android:id="@+id/tvSabado"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
+        android:text="Sábado"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvViernes" />
+
+    <TextView
+        android:id="@+id/tvDomingo"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
+        android:text="Domingo"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSabado" />
+
+    <Button
+        android:id="@+id/btnComidaLunes"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="Comida"
+        app:layout_constraintStart_toEndOf="@+id/tvLunes"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEntrenoLunes"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="30dp"
+        android:text="Entreno"
+        app:layout_constraintStart_toEndOf="@+id/btnComidaLunes"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnComidaMartes"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="44dp"
+        android:text="Comida"
+        app:layout_constraintStart_toEndOf="@+id/tvMartes"
+        app:layout_constraintTop_toBottomOf="@+id/btnComidaLunes" />
+
+    <Button
+        android:id="@+id/btnEntrenoMartes"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="44dp"
+        android:text="Entreno"
+        app:layout_constraintStart_toEndOf="@+id/btnComidaMartes"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrenoLunes" />
+
+    <Button
+        android:id="@+id/btnComidaMiercoles"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="44dp"
+        android:text="Comida"
+        app:layout_constraintStart_toEndOf="@+id/tvMiercoles"
+        app:layout_constraintTop_toBottomOf="@+id/btnComidaMartes" />
+
+    <Button
+        android:id="@+id/btnEntrenoMiercoles"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="44dp"
+        android:text="Entreno"
+        app:layout_constraintStart_toEndOf="@+id/btnComidaMiercoles"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrenoMartes" />
+
+    <Button
+        android:id="@+id/btnComidaJueves"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="44dp"
+        android:text="Comida"
+        app:layout_constraintStart_toEndOf="@+id/tvJueves"
+        app:layout_constraintTop_toBottomOf="@+id/btnComidaMiercoles" />
+
+    <Button
+        android:id="@+id/btnEntrenoJueves"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="44dp"
+        android:text="Entreno"
+        app:layout_constraintStart_toEndOf="@+id/btnComidaJueves"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrenoMiercoles" />
+
+    <Button
+        android:id="@+id/btnComidaViernes"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="44dp"
+        android:text="Comida"
+        app:layout_constraintStart_toEndOf="@+id/tvViernes"
+        app:layout_constraintTop_toBottomOf="@+id/btnComidaJueves" />
+
+    <Button
+        android:id="@+id/btnEntrenoViernes"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="44dp"
+        android:text="Entreno"
+        app:layout_constraintStart_toEndOf="@+id/btnComidaViernes"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrenoJueves" />
+
+    <Button
+        android:id="@+id/btnComidaSabado"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="44dp"
+        android:text="Comida"
+        app:layout_constraintStart_toEndOf="@+id/tvSabado"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrenoViernes" />
+
+    <Button
+        android:id="@+id/btnEntrenoSabado"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="44dp"
+        android:text="Entreno"
+        app:layout_constraintStart_toEndOf="@+id/btnComidaSabado"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrenoViernes" />
+
+    <Button
+        android:id="@+id/btnComidaDomingo"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="44dp"
+        android:text="Comida"
+        app:layout_constraintStart_toEndOf="@+id/tvDomingo"
+        app:layout_constraintTop_toBottomOf="@+id/btnComidaSabado" />
+
+    <Button
+        android:id="@+id/btnEntrenoDomingo"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="44dp"
+        android:text="Entreno"
+        app:layout_constraintStart_toEndOf="@+id/btnComidaDomingo"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrenoSabado" />
+
+    <Button
+        android:id="@+id/btnGuardarSemana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnComidaDomingo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
