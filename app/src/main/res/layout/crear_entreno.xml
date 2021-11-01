@@ -7,36 +7,59 @@
 
     <EditText
         android:id="@+id/etEntreno"
-        android:layout_width="303dp"
-        android:layout_height="305dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="370dp"
+        android:layout_height="369dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <CheckBox
         android:id="@+id/cbDescanso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="12dp"
         android:text="Día de descanso"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEntreno" />
 
     <Button
-        android:id="@+id/btnGuardarEntreno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:text="Guardar entreno"
+        android:id="@+id/btnPonerAlarma"
+        android:layout_width="340dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:onClick="showTimerPickerFragment"
+        android:text="Establecer Alarma"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cbDescanso" />
+
+    <Button
+        android:id="@+id/btnQuitarAlarma"
+        android:layout_width="340dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:onClick="cancelAlarm"
+        android:text="Quitar Alarma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPonerAlarma" />
+
+    <Button
+        android:id="@+id/btnGuardarEntreno"
+        android:layout_width="340dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="64dp"
+        android:text="Guardar entreno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnQuitarAlarma" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

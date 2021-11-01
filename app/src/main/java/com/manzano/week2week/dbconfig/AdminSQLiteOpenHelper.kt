@@ -1,4 +1,4 @@
-package com.manzano.week2week
+package com.manzano.week2week.dbconfig
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
@@ -29,6 +29,13 @@ class AdminSQLiteOpenHelper(context: Context, name: String, factory: SQLiteDatab
                     "comidatrampa int," +
                     "entreno text," +
                     "descanso int," +
+                    "idsemana int," +
+                    "foreign key(idsemana) references semana(id))")
+
+            db.execSQL("create table progreso(" +
+                    "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "peso double," +
+                    "foto text," +
                     "idsemana int," +
                     "foreign key(idsemana) references semana(id))")
         }

@@ -1,12 +1,12 @@
 package com.manzano.week2week.activities
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.manzano.week2week.AdminSQLiteOpenHelper
+import com.manzano.week2week.dbconfig.AdminSQLiteOpenHelper
 import com.manzano.week2week.R
 
 class VerSemanaActivity : AppCompatActivity() {
@@ -18,6 +18,7 @@ class VerSemanaActivity : AppCompatActivity() {
         val idSemana = bundle?.getLong("idSemana")
         val idUsuario = bundle?.getLong("idUsuario")
 
+        val btnProgreso = findViewById<Button>(R.id.btnProgreso)
         val btnModificarSemana = findViewById<Button>(R.id.btnModificarSemana)
         val btnBorrarSemana = findViewById<Button>(R.id.btnBorrarSemana)
         val btnVolverSemanas = findViewById<Button>(R.id.btnVolverSemanas)
@@ -33,8 +34,6 @@ class VerSemanaActivity : AppCompatActivity() {
         var contador = 0
         if (fila.moveToFirst()) {
             while (fila.isAfterLast == false) {
-                Log.i("VerSemana", "Id del dia " + fila.getString(1) + " es el: " + fila.getLong(0))
-                Log.i("VerSemana", "de la semana con id: " + idSemana)
                 val nombre = fila.getString(1)
                 val comida = fila.getString(2)
                 val comidatrampa = fila.getInt(3)
@@ -43,6 +42,9 @@ class VerSemanaActivity : AppCompatActivity() {
 
                 val btnDia = Button(this)
                 btnDia.text = nombre
+                if(nombre.equals("Sábado") || nombre.equals("Domingo")){
+                    btnDia.setBackgroundColor(Color.argb(100, 4, 168, 166))
+                }
                 btnDia.setOnClickListener{
                     val intent = Intent(this, VerDiaActivity::class.java)
                     intent.putExtra("comida", comida)
@@ -60,6 +62,12 @@ class VerSemanaActivity : AppCompatActivity() {
         }
 
         fila.close()
+
+        btnProgreso.setOnClickListener {
+            val intent = Intent(this, ProgresoActivity::class.java)
+            intent.putExtra("idSemana", idSemana)
+            startActivity(intent)
+        }
 
         btnModificarSemana.setOnClickListener {
             val intent = Intent(this, CrearSemanaActivity::class.java)

@@ -10,7 +10,7 @@ import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.manzano.week2week.AdminSQLiteOpenHelper
+import com.manzano.week2week.dbconfig.AdminSQLiteOpenHelper
 import com.manzano.week2week.R
 
 class SemanasActivity : AppCompatActivity(){
@@ -32,13 +32,14 @@ class SemanasActivity : AppCompatActivity(){
 
         val fila = bd.rawQuery("select id, nombre from semana where idusuario = ${idUsuario}", null)
 
+        var contadorSemana = 1;
         if (fila.moveToFirst()) {
             while (fila.isAfterLast == false) {
                 Log.i("Semanas", "Id de la semana " + fila.getString(1) + " es el: " + fila.getLong(0))
                 val idSemana = fila.getLong(0)
                 //val nombreSemana = fila.getString(1)
                 val btnSemana = Button(this)
-                btnSemana.text = "Semana " + idSemana
+                btnSemana.text = "Semana " + contadorSemana
                 btnSemana.setOnClickListener{
                     val intent = Intent(this, VerSemanaActivity::class.java)
                     intent.putExtra("idSemana", idSemana)
@@ -47,6 +48,7 @@ class SemanasActivity : AppCompatActivity(){
                 }
 
                 linearLayour.addView(btnSemana)
+                contadorSemana++;
 
                 fila.moveToNext()
             }
@@ -83,7 +85,7 @@ class SemanasActivity : AppCompatActivity(){
             val idMartes = bd.insert("dia", null, valuesMartes)
 
             val valueMiercoles = ContentValues().apply{
-                put("nombre", "Miercoles")
+                put("nombre", "Miércoles")
                 put("comida", "")
                 put("entreno", "")
                 put("comidatrampa", 0)
@@ -113,7 +115,7 @@ class SemanasActivity : AppCompatActivity(){
             val idViernes = bd.insert("dia", null, valuesViernes)
 
             val valuesSabado = ContentValues().apply{
-                put("nombre", "Sabado")
+                put("nombre", "Sábado")
                 put("comida", "")
                 put("entreno", "")
                 put("comidatrampa", 0)
@@ -131,6 +133,14 @@ class SemanasActivity : AppCompatActivity(){
                 put("idSemana", idNuevaSemana)
             }
             val idDomingo = bd.insert("dia", null, valuesDomingo)
+
+            //Se crea la fila en la tabla progreso de la semana correspondiente
+            val valuesProgreso = ContentValues().apply{
+                put("peso", 0.0)
+                put("foto", "")
+                put("idSemana", idNuevaSemana)
+            }
+            bd.insert("progreso", null, valuesProgreso)
 
             //Se lanza el nuevo activity
             val intent = Intent(this, CrearSemanaActivity::class.java)

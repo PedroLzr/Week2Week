@@ -7,8 +7,8 @@
 
     <ScrollView
         android:id="@+id/scrollDias"
-        android:layout_width="374dp"
-        android:layout_height="438dp"
+        android:layout_width="375dp"
+        android:layout_height="401dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,13 +23,36 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/btnBorrarSemana"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnProgreso"
+        android:layout_width= "300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Progreso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollDias" />
+
+    <Button
+        android:id="@+id/btnModificarSemana"
+        android:layout_width= "300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Borrar semana"
+        android:text="Modificar semana"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnProgreso" />
+
+    <Button
+        android:id="@+id/btnBorrarSemana"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#D60B0B"
+        android:text="Borrar semana"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnModificarSemana" />
 
@@ -37,22 +60,11 @@
         android:id="@+id/btnVolverSemanas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="36dp"
         android:text="Volver"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnBorrarSemana" />
-
-    <Button
-        android:id="@+id/btnModificarSemana"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Modificar semana"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollDias" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

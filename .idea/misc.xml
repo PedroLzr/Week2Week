@@ -3,15 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/34626/AndroidStudioProjects/Week2week/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
         <entry key="..\:/Users/34626/AndroidStudioProjects/Week2week/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
         <entry key="..\:/Users/34626/AndroidStudioProjects/Week2week/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/34626/AndroidStudioProjects/Week2week/app/src/main/res/layout/crear_comida.xml" value="0.18885869565217392" />
-        <entry key="..\:/Users/34626/AndroidStudioProjects/Week2week/app/src/main/res/layout/crear_entreno.xml" value="0.18885869565217392" />
-        <entry key="..\:/Users/34626/AndroidStudioProjects/Week2week/app/src/main/res/layout/crear_semana.xml" value="0.18885869565217392" />
+        <entry key="..\:/Users/34626/AndroidStudioProjects/Week2week/app/src/main/res/layout/crear_entreno.xml" value="0.22" />
+        <entry key="..\:/Users/34626/AndroidStudioProjects/Week2week/app/src/main/res/layout/crear_semana.xml" value="0.25" />
         <entry key="..\:/Users/34626/AndroidStudioProjects/Week2week/app/src/main/res/layout/principal_semanas.xml" value="0.21" />
         <entry key="..\:/Users/34626/AndroidStudioProjects/Week2week/app/src/main/res/layout/registro_usuario.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/34626/AndroidStudioProjects/Week2week/app/src/main/res/layout/ver_dia.xml" value="0.17527173913043478" />
+        <entry key="..\:/Users/34626/AndroidStudioProjects/Week2week/app/src/main/res/layout/ver_progreso.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/34626/AndroidStudioProjects/Week2week/app/src/main/res/layout/ver_semana.xml" value="0.25" />
+        <entry key="..\:/Users/34626/AndroidStudioProjects/Week2week/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
+        <entry key="..\:/Users/34626/AndroidStudioProjects/Week2week/app/src/main/res/xml/file_paths.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
