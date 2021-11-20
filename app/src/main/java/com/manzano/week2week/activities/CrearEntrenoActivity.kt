@@ -51,6 +51,8 @@ class CrearEntrenoActivity : AppCompatActivity(), TimePickerDialog.OnTimeSetList
             else{
                 etEntreno.isEnabled = true
                 etEntreno.setText("")
+                btnPonerAlarma.isEnabled = true
+                btnQuitarAlarma.isEnabled = true
             }
         }
 

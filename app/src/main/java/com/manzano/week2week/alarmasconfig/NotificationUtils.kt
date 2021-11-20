@@ -48,7 +48,7 @@ class  NotificationUtils(base: Context) : ContextWrapper(base) {
         }
         val pendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
         return NotificationCompat.Builder(applicationContext, MYCHANNEL_ID)
-            .setContentTitle("W2W")
+            .setContentTitle("Prepárate...")
             .setContentText("¡Es hora de entrenar!")
             .setSmallIcon(R.drawable.imginicio)
             .setColor(Color.YELLOW)
